@@ -56,7 +56,7 @@ class Decoder(nn.Module):
     
     def __init__(self, params):
         super(Decoder, self).__init__()
-        self.token_embedding.weight = nn.Embedding(params.output_dim, params.hidden_dim, padding_idx=params.pad_idx)
+        self.token_embedding = nn.Embedding(params.output_dim, params.hidden_dim, padding_idx=params.pad_idx)
         # 임베딩 테이블 만드는 함수 
         # params.input_dim=단어 집합의 수 params.hidden_dim = 단어 임베딩 차원 = 512 padding_idx= 패딩을 하는 경우 패딩 인덱스를 알려줘야 함
         nn.init.normal_(self.token_embedding.weight, mean=0, std=params.hidden_dim**-0.5)
