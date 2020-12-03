@@ -1,5 +1,5 @@
 ## Test
-1128 params: layer(6->2), dim(512->256)
+
 
 ## Transformer PyTorch implementation
 This repository contains [**Transformer**](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) implementation used to **translate Korean sentence into English sentence**.
